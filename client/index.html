@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<ul>
+  <li>
+    <button onclick="APP.clickBtn1()">Click me</button>
+    <p id="demo"></p>
+
+    <ul>
+    <li>
+      <button onclick="APP.clickBtn2()">Click me 2</button>
+      <p id="demo1"></p>
+  </li>
+  </ul>
+  </li>
+  <li>
+    <button onclick="APP.clickBtn3()">Click me 3</button>
+    <p id="demo2"></p>
+  </li>
+</ul>
+
+
+<script>
+
+  var APP = ( function () {
+    // using IIFE to avoid putting stuff on global scope
+
+    return {
+
+      clickBtn1 : function () {
+      document.getElementById("demo").innerHTML = "Hey There! you clicked btn 1";
+    } ,
+
+      clickBtn2 : function() {
+      document.getElementById("demo1").innerHTML = "clicked btn 2";
+    },
+
+    clickBtn3 : function() {
+      document.getElementById("demo2").innerHTML = "clicked btn 3";
+    }
+
+    };
+
+  })();
+
+</script>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/event-fetcher.js"></script>
+
+</body>
+</html>
