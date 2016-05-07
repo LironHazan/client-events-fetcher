@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script src="scripts/main.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
 </head>
 
 <body>
@@ -22,36 +26,6 @@
     <p id="demo2"></p>
   </li>
 </ul>
-
-
-<script>
-
-  var APP = ( function () {
-    // using IIFE to avoid putting stuff on global scope
-
-    return {
-
-      clickBtn1 : function () {
-      document.getElementById("demo").innerHTML = "Hey There! you clicked btn 1";
-    } ,
-
-      clickBtn2 : function() {
-      document.getElementById("demo1").innerHTML = "clicked btn 2";
-    },
-
-    clickBtn3 : function() {
-      document.getElementById("demo2").innerHTML = "clicked btn 3";
-    }
-
-    };
-
-  })();
-
-</script>
-
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/event-fetcher.js"></script>
-
+<script src="/scripts/event-fetcher.js"></script>
 </body>
 </html>
